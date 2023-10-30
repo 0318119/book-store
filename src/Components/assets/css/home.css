@@ -1,0 +1,59 @@
+.mainBannerBox {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.homeBanner {
+    position: relative;
+}
+
+.homeBanner img {
+    height: 301px;
+    background-position: center;
+    background-size: cover;
+}
+
+.homeBanner .searchBox {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.homeBanner .searchBox input {
+    width: 30%;
+    border: none;
+    height: 38px;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+.homeBanner .searchBox svg {
+    font-size: 24px;
+    background: #007bff;
+    height: 38px;
+    width: 50px;
+    padding: 0 13px;
+    color: white;
+}
+
+.imageSearchSystem{
+    margin-top: 50px;
+}
+.imageSearchSystem .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.imageSearchSystem .image-box {
+    max-width: 100%;
+    margin: 10px 0;
+}
+.imageSearchSystem .image-box img{
+    height: 280px;
+    object-fit: cover;
+}

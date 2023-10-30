@@ -1,0 +1,31 @@
+.botFooter{
+    background: #6c757d;
+    padding: 50px 0;
+    margin-top: 60px;
+}
+.botFooter .footerBotLogo img{
+    height: 46px;
+    width: 119px;
+    object-fit: contain;
+}
+.botFooter .footerBotLogo p{
+    padding-top: 5px;
+    font-size: 15px;
+    color: white;
+    line-height: 20px;
+}
+
+.botFooter .footerLinks{
+    display: flex;
+    flex-direction: column;
+}
+.botFooter .footerLinks h5{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.botFooter .footerLinks ul li a{
+    color: white;
+}
