@@ -53,16 +53,16 @@ function Home() {
             <div className="col-lg-12">
               <div className="image-grid">
                 {
-                    isBookData?.length > 0 ?
-                      isBookData?.map((items) => {
-                        return (
-                          <div className="image-box border pb-2">
-                            <h5 className='mb-3 p-2' style={{ textTransform: "capitalize" }}>{items?.title}</h5>
-                            <img src={baseUrl.baseUrl + "/" + items?.title_image} alt={items?.title} />
-                          </div>
-                        )
-                      }) :
-                      "Not Data Found"
+                  isBookData?.length > 0 ?
+                    isBookData?.map((items) => {
+                      return (
+                        <div className="image-box border pb-2">
+                          <h5 className='mb-3 p-2' style={{ textTransform: "capitalize" }}>{items?.title}</h5>
+                          <img src={baseUrl.baseUrl + "/" + items.title_image?.split("/resources/static/assets/uploads/")[1]} alt={items?.title} />
+                        </div>
+                      )
+                    }) :
+                    "Not Data Found"
                 }
               </div>
             </div>

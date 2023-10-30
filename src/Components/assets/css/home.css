@@ -56,4 +56,5 @@
 .imageSearchSystem .image-box img{
     height: 280px;
     object-fit: cover;
+    width: 220px;
 }
