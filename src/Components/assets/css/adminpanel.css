@@ -1,0 +1,243 @@
+.mainbx {
+    background-color: #f0f0f0;
+    margin-top: 50px;
+    border: 1px solid #80808021;
+    border-radius: 5px;
+}
+
+h5 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.updatebtn {
+    color: #014f86;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 30px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.deletebtn {
+    color: red;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 30px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.addnew {
+    background-color: #014f86;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ddd;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.addnewmodal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.addnewmodal-box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px #ddd;
+    width: 400px;
+    position: relative;
+}
+
+.addnewmodal .form-group {
+    margin-bottom: 20px;
+
+}
+
+.addnewmodal label {
+    font-weight: bold;
+}
+
+.addnewmodal input[type="text"],
+.addnewmodal textarea,
+.addnewmodal input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.addnewmodal button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.addnewmodal button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.cancelbtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ddd;
+    padding: 5px;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.363);
+}
+
+.modal-box{
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px #ddd;
+    width: 400px;
+}
+
+.confirm-delete{
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.cancel{
+    background-color: #333;
+    color: #fff;
+    padding: 5px 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+/* .input-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchbar{
+    width: 50%;
+    
+    margin-right: 20px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+} */
+  
+.error-message{
+    color: black;
+}
+  

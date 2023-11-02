@@ -12,6 +12,7 @@
     height: 301px;
     background-position: center;
     background-size: cover;
+    width: 100%;
 }
 
 .homeBanner .searchBox {
@@ -46,15 +47,23 @@
 .imageSearchSystem .image-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .imageSearchSystem .image-box {
-    max-width: 100%;
-    margin: 10px 0;
+    margin: 10px 10px;
+    width: 250px;
+    border-radius: 10px;
 }
 .imageSearchSystem .image-box img{
-    height: 280px;
+    height: 200px;
     object-fit: cover;
-    width: 220px;
+    width: inherit;
+    padding: 0 5px;
+}
+
+@media screen and (max-width:992px){
+    .homeBanner .searchBox input {
+        width: 80%;
+    }
 }

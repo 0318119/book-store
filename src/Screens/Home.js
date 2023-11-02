@@ -10,10 +10,11 @@ import baseUrl from '../config.json'
 
 function Home() {
   const [isBookData, setBookData] = useState([])
+  const [page,setpage] = useState(1)
 
   async function GET_BOOKS() {
     await fetch(
-      `${baseUrl.baseUrl}/books/GetBooks/0`, {
+      `${baseUrl.baseUrl}/books/GetBooks/${page}`, {
       method: "GET",
       headers: { "content-type": "application/json" },
     }
@@ -30,7 +31,7 @@ function Home() {
 
   useEffect(() => {
     GET_BOOKS()
-  }, [])
+  }, [page])
 
 
   return (
@@ -57,13 +58,21 @@ function Home() {
                     isBookData?.map((items) => {
                       return (
                         <div className="image-box border pb-2">
-                          <h5 className='mb-3 p-2' style={{ textTransform: "capitalize" }}>{items?.title}</h5>
+                          <h6 className='mb-3 p-2' style={{ textTransform: "capitalize" }}>{items?.title.slice(0,15)}...</h6>
                           <img src={baseUrl.baseUrl + "/" + items.title_image?.split("/resources/static/assets/uploads/")[1]} alt={items?.title} />
                         </div>
                       )
                     }) :
                     "Not Data Found"
                 }
+              </div>
+              <div style={{display: "flex",justifyContent: "end",marginTop: "20px"}}>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item"><span class="page-link"  onClick={() => {setpage(page-1)}}>Previous</span></li>
+                  <li class="page-item"><span class="page-link" onClick={() => {setpage(page+1)}}>Next</span></li>
+                </ul>
+              </nav>
               </div>
             </div>
           </div>
