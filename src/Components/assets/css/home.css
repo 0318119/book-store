@@ -55,12 +55,24 @@
     width: 250px;
     border-radius: 10px;
 }
+
+.imageSearchSystem .image-box h6 {
+    text-transform: capitalize;
+    color: black;
+}
+
+.imageSearchSystem .image-box h6:hover{
+    color: blue;
+}
+
 .imageSearchSystem .image-box img{
     height: 200px;
     object-fit: cover;
     width: inherit;
     padding: 0 5px;
 }
+
+
 
 @media screen and (max-width:992px){
     .homeBanner .searchBox input {

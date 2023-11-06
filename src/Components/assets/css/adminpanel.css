@@ -1,3 +1,9 @@
+/* body{
+    background: linear-gradient(to right, #007bff, #00cc99);
+    margin: 0px;
+    padding: 0px;
+} */
+
 .mainbx {
     background-color: #f0f0f0;
     margin-top: 50px;
@@ -13,6 +19,11 @@ h5 {
     text-align: center;
 }
 
+.actions-btns {
+    display: flex;
+    align-items: center;
+}
+
 .updatebtn {
     color: #014f86;
     border: none;
@@ -24,7 +35,7 @@ h5 {
     align-items: center;
     text-decoration: none;
     text-align: center;
-    margin-left: 30px;
+    margin-left: 10px;
     font-size: 20px;
 }
 
@@ -48,7 +59,7 @@ h5 {
     color: #fff;
     border: none;
     border-radius: 20px;
-    padding: 8px 20px;
+    padding: 8px 30px;
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
@@ -88,7 +99,7 @@ textarea {
 }
 
 button[type="submit"] {
-    background-color: #007bff;
+    background-color: #014f86;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -145,7 +156,7 @@ button[type="submit"]:hover {
 }
 
 .addnewmodal button[type="submit"] {
-    background-color: #007bff;
+    background-color: #014f86;
     color: #fff;
     padding: 10px 35px;
     border: none;
@@ -177,7 +188,7 @@ button[type="submit"]:hover {
     cursor: pointer;
 }
 
-.modal{
+.modal {
     position: fixed;
     width: 100%;
     display: flex;
@@ -187,7 +198,7 @@ button[type="submit"]:hover {
     background: rgba(0, 0, 0, 0.363);
 }
 
-.modal-box{
+.modal-box {
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
@@ -196,7 +207,7 @@ button[type="submit"]:hover {
     width: 400px;
 }
 
-.confirm-delete{
+.confirm-delete {
     background-color: #007bff;
     color: #fff;
     padding: 5px 15px;
@@ -209,7 +220,7 @@ button[type="submit"]:hover {
     margin-left: 30px;
 }
 
-.cancel{
+.cancel {
     background-color: #333;
     color: #fff;
     padding: 5px 35px;
@@ -222,22 +233,136 @@ button[type="submit"]:hover {
     margin-left: 10px;
 }
 
-/* .input-wrapper{
+.input-wrapper {
     display: flex;
     justify-content: space-between;
 }
 
-.searchbar{
+.searchbar {
     width: 50%;
-    
     margin-right: 20px;
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 10px;
+    /* border: 1px solid black; */
     border: none;
-} */
-  
-.error-message{
+}
+
+.error-message {
     color: black;
 }
-  
+
+.uploadbtn {
+    color: #014f86;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 30px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 55px;
+    font-size: 20px;
+}
+
+.confirm-submit {
+    background-color: #014f86;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 35px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.confirm-submit:hover {
+    background-color: #0056b3;
+}
+
+.modal-boxx {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px #ddd;
+    width: 400px;
+    position: relative;
+}
+
+.cancelbtne {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ddd;
+    padding: 5px;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .mainbx {
+        margin-top: 20px;
+        border: 1px solid #80808021;
+    }
+
+    h5 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .addnew {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+
+    .updatebtn,
+    .deletebtn,
+    .uploadbtn,
+    .confirm-submit {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainbx {
+        margin-top: 10px;
+    }
+
+    h5 {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .addnew {
+        font-size: 10px;
+        margin-left: 2px;
+    }
+
+    .updatebtn,
+    .deletebtn,
+    .uploadbtn,
+    .confirm-submit {
+        font-size: 14px;
+        margin-left: 2px;
+    }
+}
+

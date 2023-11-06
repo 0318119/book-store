@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Table from 'react-data-table-component';
 import baseUrl from '../config.json';
 import '../Components/assets/css/adminpanel.css';
-import { AiFillEdit, AiFillDelete } from 'react-icons/ai';
+import { AiFillEdit, AiFillDelete,AiOutlineCloudUpload } from 'react-icons/ai';
 import { Button, message, Space } from 'antd';
 
 
@@ -17,6 +17,9 @@ function AdminPanel() {
   const [isPDFFile,setPDFFile] = useState('')
   const [page, setPage] = useState(1)
   const [Isrows, setRows] = useState([]);
+  const [AdminFilterSearch, setAdminFilterSearch] = useState("");
+  
+
 
 
   const [isModal, setModal] = useState({
@@ -79,6 +82,22 @@ function AdminPanel() {
     }
   }, [isLoading]);
 
+  const SearchisFilter = (e) => {
+    const searchingTerm = e.target.value;
+    setAdminFilterSearch(searchingTerm);
+  
+    if (searchingTerm.trim() === '') {
+      GET_BOOKS();
+    } else {
+      const filtereingdata = isBookData.filter((item) =>
+      (item.title && item.title.toLowerCase().includes(searchingTerm.toLowerCase())) ||
+      (item.rNo && item.rNo.toLowerCase().includes(searchingTerm.toLowerCase())) ||
+      (item.description && item.description.toLowerCase().includes(searchingTerm.toLowerCase()))
+      );
+      setBookData(filtereingdata);
+    }
+  }
+
   const customStyles = {
     headCells: {
       style: {
@@ -137,12 +156,12 @@ function AdminPanel() {
       name: 'Upload PDF',
       cell: (row) => (
         <div className=''>
-          <button className='updatebtn' onClick={() => { 
+          <button className='uploadbtn' onClick={() => { 
                 setModal({uploadPdfModal: true})
                 setUpdateId(row?.id)
 
            }}>
-            <AiFillEdit />
+            <AiOutlineCloudUpload />
           </button>
         </div>
       ),
@@ -150,7 +169,7 @@ function AdminPanel() {
     {
       name: 'Actions',
       cell: (row) => (
-        <div className=''>
+        <div className='actions-btns'>
           <button className='updatebtn' onClick={() => { editDataModal(row?.id) }}>
             <AiFillEdit />
           </button>
@@ -424,6 +443,9 @@ function AdminPanel() {
   const handlePageChange = page => {
       setPage(page)
   }
+
+
+
   return (
     <>
 
@@ -435,14 +457,16 @@ function AdminPanel() {
           <div className='col-12'>
             <div className='mainbx'>
               <h5>Admin Panel</h5>
-              {/* <div className="input-wrapper"> */}
+              <div className="input-wrapper">
               <button className='addnew' onClick={() => { setModal({ addNewModal: true }) }}>
                 Add New
               </button>
-              {/* <input className='searchbar'
+              <input className='searchbar'
                   placeholder="Type to search..."
+                  value={AdminFilterSearch} 
+                  onChange={SearchisFilter}
                 />
-              </div> */}
+              </div>
               <Table
                 columns={columns}
                 data={isBookData}
@@ -481,17 +505,17 @@ function AdminPanel() {
 
       {isModal?.uploadPdfModal && (
         <div className='modal'>
-          <div className='modal-box'>
-             <button className='cancelbtn' onClick={() => {
+          <div className='modal-boxx'>
+             <button className='cancelbtne' onClick={() => {
                 setModal({ uploadPdfModal: false })
                 setUpdateId(null)
               }}>X</button>
             <h5 className='text-uppercase'>Upload a PDF file</h5>
             <div className="form-group">
-              <label htmlFor="name">PDF :</label>
+              <label htmlFor="name">PDF </label>
               <input type="file" className='form-control' required accept=".pdf" onChange={(e) => { setPDFFile(e.target.files[0]) }}/>
             </div>
-            <button className='confirm-delete' disabled={isLoading.isFormLoading} onClick={uploadPDfFile}>
+            <button className='confirm-submit' disabled={isLoading.isFormLoading} onClick={uploadPDfFile}>
               Submit
             </button>
           </div>
