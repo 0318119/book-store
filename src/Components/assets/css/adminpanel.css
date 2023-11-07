@@ -315,7 +315,7 @@ button[type="submit"]:hover {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
     .mainbx {
         margin-top: 20px;
         border: 1px solid #80808021;
@@ -339,9 +339,34 @@ button[type="submit"]:hover {
         font-size: 16px;
         margin-left: 5px;
     }
+
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 991px) {
+    .mainbx {
+        margin-top: 20px;
+    }
+
+    h5 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .addnew,
+    .updatebtn,
+    .deletebtn,
+    .uploadbtn,
+    .confirm-submit {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    /* Adjust other styles as needed for screens up to 991px wide */
+}
+
+@media (max-width: 767px) {
     .mainbx {
         margin-top: 10px;
     }
@@ -352,11 +377,7 @@ button[type="submit"]:hover {
         margin-bottom: 10px;
     }
 
-    .addnew {
-        font-size: 10px;
-        margin-left: 2px;
-    }
-
+    .addnew,
     .updatebtn,
     .deletebtn,
     .uploadbtn,
@@ -364,5 +385,6 @@ button[type="submit"]:hover {
         font-size: 14px;
         margin-left: 2px;
     }
-}
 
+    /* Adjust other styles as needed for screens up to 767px wide */
+}
